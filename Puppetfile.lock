@@ -1,12 +1,37 @@
 GITHUBTARBALL
+  remote: boxen/puppet-adium
+  specs:
+    adium (1.0.1)
+
+GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
     boxen (1.2.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-caffeine
+  specs:
+    caffeine (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-chrome
+  specs:
+    chrome (1.1.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-cord
+  specs:
+    cord (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-dnsmasq
   specs:
     dnsmasq (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-firefox
+  specs:
+    firefox (1.0.5)
 
 GITHUBTARBALL
   remote: boxen/puppet-gcc
@@ -19,6 +44,11 @@ GITHUBTARBALL
     git (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-handbrake
+  specs:
+    handbrake (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-homebrew
   specs:
     homebrew (1.1.2)
@@ -27,6 +57,11 @@ GITHUBTARBALL
   remote: boxen/puppet-hub
   specs:
     hub (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-minecraft
+  specs:
+    minecraft (1.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-nginx
@@ -49,19 +84,34 @@ GITHUBTARBALL
     ruby (3.1.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-skype
+  specs:
+    skype (1.0.2)
+
+GITHUBTARBALL
   remote: boxen/puppet-sudo
   specs:
     sudo (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-transmission
+  specs:
+    transmission (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-vlc
+  specs:
+    vlc (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-xquartz
+  specs:
+    xquartz (1.0.0)
+
+GITHUBTARBALL
   remote: cprice-puppet/puppetlabs-inifile
   specs:
     inifile (0.9.0)
-
-GITHUBTARBALL
-  remote: glarizza/puppet-property_list_key
-  specs:
-    property_list_key (0.1.0)
 
 GITHUBTARBALL
   remote: grahamgilbert/puppet-dockutil
@@ -74,19 +124,29 @@ GITHUBTARBALL
     stdlib (3.0.0)
 
 DEPENDENCIES
+  adium (= 1.0.1)
   boxen (= 1.2.0)
+  caffeine (= 1.0.0)
+  chrome (= 1.1.0)
+  cord (= 1.0.0)
   dnsmasq (= 1.0.0)
   dockutil (= 0.1.0)
+  firefox (= 1.0.5)
   gcc (= 1.0.0)
   git (= 1.0.0)
+  handbrake (= 1.0.0)
   homebrew (= 1.1.2)
   hub (= 1.0.0)
   inifile (= 0.9.0)
+  minecraft (= 1.0.0)
   nginx (= 1.1.0)
   nodejs (= 1.0.0)
   nvm (= 1.0.0)
-  property_list_key (= 0.1.0)
   ruby (= 3.1.0)
+  skype (= 1.0.2)
   stdlib (= 3.0.0)
   sudo (= 1.0.0)
+  transmission (= 1.0.0)
+  vlc (= 1.0.0)
+  xquartz (= 1.0.0)
 

@@ -14,14 +14,6 @@ class people::grahamgilbert::dock (
 		require  => Class['chrome'],
 	}
 	
-	dockutil::item { 'Add iTerm':
-		item 	 => "/Applications/iTerm.app",
-		label	 => "iTerm",
-		action 	 => "add",
-		position => 2,
-		require	 => Class['iterm2::dev'],
-	}
-	
 	## Remove the default crap	
 	dockutil::item { 'Remove Launchpad':
 		item 	=> "/Applications/Launchpad.app",

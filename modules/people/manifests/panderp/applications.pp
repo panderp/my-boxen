@@ -7,7 +7,7 @@ class people::panderp::applications (
   include minecraft
   include chrome
   include firefox
-  include iterm2::dev
+#  include iterm2::dev
   include adium
   include skype
   include transmission
