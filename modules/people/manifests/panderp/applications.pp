@@ -11,7 +11,7 @@ class people::panderp::applications (
   include adium
   include skype
   include transmission
-  include kindle
+#  include kindle
   include cord
   include xquartz
   include vlc
