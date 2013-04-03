@@ -1,104 +1,112 @@
-class people::panderp::settings::dock (
-  $my_homedir	= $people::panderp::params::my_homedir,
-  $my_sourcedir	= $people::panderp::params::my_sourcedir,
-  $my_username	= $people::panderp::params::my_username
-  ) {
-
-  propery_list_key { 'Lower Right Hotcorner - Screen Saver':
-    ensure	=> present,
-    path	=> "${#my_homedir}/Library/Preferences/com.apple.dock.plist",
-    key 	=> 'wvous-br-corner',
-    value	=> 10,
-    value_type	=> 'integer',
-    notify	=> Exec['Restart the Dock'],
-    }
-
-  exec { 'Restart the Dock':
-    command	=> '/usr/bin/killall -HUP Dock',
-    refreshonly	=> true,
-    }
-
-  file { 'Dock Plist':
-    ensure	=> file,
-    require	=> [
-			Property_list_key['Lower Right Hotcorner - Screen Saver'],
-		   ],
-    path    => "${my_homedir}/Library/Preferences/com.apple.dock.plist",
-    mode    => '0600',
-    notify     => Exec['Restart the Dock'],
-  }
-
-  include dockutil
-
-  dockutil::Item { 'Add Chrome':
-    item	=> "/Applications/Google Chrome.app",
-    label	=> "Google Chrome",
-    position	=> 1,
-    action	=> "add",
-    require	=> Class['chrome'],
-  }
-
-  dockutil::Item { 'Add Adium':
-    item        => "/Applications/Adium.app",
-    label       => "Adium",
-    position    => 2,
-    action      => "add",
-    require     => Class['adium'],
-  } 
-
-  dockutil::Item { 'Add iTerm':
-    item        => "/Applications/iTerm.app",
-    label       => "iTerm",
-    position    => 3,
-    action      => "add",
-    require     => Class['iterm::dev'],
-  } 
-
-  dockutil::Item { 'Add Cord':
-    item        => "/Applications/Cord.app",
-    label       => "Cord",
-    position    => 4,
-    action      => "add",
-    require     => Class['cord'],
-  } 
-
-  dockutil::Item { 'Add Firefox':
-    item        => "/Applications/Firefox.app",
-    label       => "Firefox",
-    position    => 5,
-    action      => "add",
-    require     => Class['firefox'],
-  } 
-
-  dockutil::Item { 'Add Skype':
-    item        => "/Applications/Skype.app",
-    label       => "Skype",
-    position    => 6,
-    action      => "add",
-    require     => Class['skype'],
-  } 
-
-  dockutil::Item { 'Add VLC':
-    item        => "/Applications/VLC.app",
-    label       => "VLC",
-    position    => 7,
-    action      => "add",
-    require     => Class['vlc'],
-  } 
-
-  dockutil::Item { 'Add Minecraft':
-    item        => "/Applications/Minecraft.app",
-    label       => "Minecraft",
-    position    => 8, 
-    action      => "add",
-    require     => Class['minecraft'],
-  } 
-
-  dockutil::Item { 'Add Transmission':
-    item        => "/Applications/Transmission.app",
-    label       => "Transmission",
-    position    => 9,
-    action      => "add",
-    require     => Class['transmission'],
-  } 
-} 
+class people::grahamgilbert::dock (
+	$my_homedir   = $people::grahamgilbert::params::my_homedir,
+  	$my_sourcedir = $people::grahamgilbert::params::my_sourcedir,
+  	$my_username  = $people::grahamgilbert::params::my_username
+	){
+	
+	include dockutil
+	
+	dockutil::item { 'add chrome':
+		item 	 => "/Applications/Google Chrome.app",
+		label	 => "Google Chrome",
+		position => 1,
+		action 	 => "add",
+		require  => Class['chrome'],
+	}
+	
+	dockutil::item { 'Add iTerm':
+		item 	 => "/Applications/iTerm.app",
+		label	 => "iTerm",
+		action 	 => "add",
+		position => 2,
+		require	 => Class['iterm2::dev'],
+	}
+	
+	## Remove the default crap	
+	dockutil::item { 'Remove Launchpad':
+		item 	=> "/Applications/Launchpad.app",
+		label	=> "Launchpad",
+		action	=> "remove",
+	}
+	
+	dockutil::item { 'Remove Mission Control':
+		item => "/Applications/Mission Control.app",
+		label	=> "Mission Control",
+		action => "remove",
+	}
+	
+	dockutil::item { 'Remove Safari':
+		item => "/Applications/Safari.app",
+		label	=> "Safari",
+		action => "remove",
+	}
+	
+	dockutil::item { 'Remove Mail':
+		item => "/Applications/Mail.app",
+		label	=> "Mail",
+		action => "remove",
+	}
+	
+	dockutil::item { 'Remove Contacts':
+		item => "/Applications/Contacts.app",
+		label	=> "Contacts",
+		action => "remove",
+	}
+	
+	dockutil::item { 'Remove Calendar':
+		item => "/Applications/Calendar.app",
+		label	=> "Calendar",
+		action => "remove",
+	}
+	
+	dockutil::item { 'Remove Reminders':
+		item => "/Applications/Reminders.app",
+		label	=> "Reminders",
+		action => "remove",
+	}
+	
+	dockutil::item { 'Remove Notes':
+		item => "/Applications/Notes.app",
+		label	=> "Notes",
+		action => "remove",
+	}
+	
+	dockutil::item { 'Remove Messages':
+		item => "/Applications/Messages.app",
+		label	=> "Messages",
+		action => "remove",
+	}
+	
+	dockutil::item { 'Remove FaceTime':
+		item => "/Applications/FaceTime.app",
+		label	=> "FaceTime",
+		action => "remove",
+	}
+	
+	dockutil::item { 'Remove Photo Booth':
+		item => "/Applications/Photo Booth.app",
+		label	=> "Photo Booth",
+		action => "remove",
+	}
+	
+	dockutil::item { 'Remove iTunes':
+		item => "/Applications/iTunes.app",
+		label	=> "iTunes",
+		action => "remove",
+	}
+	
+	dockutil::item { 'Remove App Store':
+		item => "/Applications/App Store.app",
+		label	=> "App Store",
+		action => "remove",
+	}
+	
+	dockutil::item { 'Remove System Preferences':
+		item => "/Applications/System Preferences.app",
+		label	=> "System Preferences",
+		action => "remove",
+	}
+	
+	
+	
+}
