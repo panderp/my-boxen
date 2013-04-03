@@ -42,6 +42,7 @@ github "caffeine"  "1.0.0"
 github "handbrake" "1.0.0"
 github "xquartz"   "1.0.0"
 github "cord"      "1.0.0"
+github "dockutil"   "0.1.0", :repo => "grahamgilbert/puppet-dockutil"
 # github "kindle"    "1.0.0"
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.

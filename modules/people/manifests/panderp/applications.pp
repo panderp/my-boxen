@@ -4,7 +4,7 @@ class people::panderp::applications (
   $my_username  = $people::panderp::params::my_username
 ) {
 
-  include minecraft
+#  include minecraft
   include chrome
   include firefox
   include iterm2::dev
