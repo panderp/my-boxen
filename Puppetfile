@@ -30,24 +30,24 @@ github "nvm",      "1.0.0"
 github "ruby",     "3.1.0"
 github "stdlib",   "3.0.0", :repo => "puppetlabs/puppetlabs-stdlib"
 github "sudo",     "1.0.0"
-github "minecraft", "1.0.0"
-github "skype",     "1.0.2"
-github "transmission",	"1.0.0"
-github "vlc",       "1.0.0"
+#github "minecraft", "1.0.0"
+#github "skype",     "1.0.2"
+#github "transmission",	"1.0.0"
+#github "vlc",       "1.0.0"
 #github "iterm2",    "1.0.2"
 github "chrome",    "1.1.0"
 github "firefox",   "1.0.5"
 github "adium",     "1.0.1"
-github "caffeine",  "1.0.0"
-github "handbrake", "1.0.0"
-github "xquartz",   "1.0.0"
-github "cord",      "1.0.0"
-# github "kindle",    "1.0.0"
-github "dockutil",	"0.1.0",	:repo => "grahamgilbert/puppet-dockutil"
+#github "caffeine",  "1.0.0"
+#github "handbrake", "1.0.0"
+#github "xquartz",   "1.0.0"
+#github "cord",      "1.0.0"
+#github "kindle"
+#github "dockutil",	"0.1.0",	:repo => "grahamgilbert/puppet-dockutil"
 
 
-# Optional/custom modules. There are tons available at
-# https://github.com/boxen.
+#Optional/custom modules. There are tons available at
+#https://github.com/boxen.
 
 #mod "property_list_key",  "0.1.0",   :github_tarball => "glarizza/puppet-property_list_key"
 #mod "property_list_key",  "0.1.0",   :github_tarball => "glarizza/puppet-property_list_key"
