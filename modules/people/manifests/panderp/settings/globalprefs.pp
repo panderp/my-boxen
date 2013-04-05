@@ -1,4 +1,4 @@
-class people::natewalck::settings::globalprefs (
+class people::panderp::settings::globalprefs (
   $my_homedir   = $people::panderp::params::my_homedir,
   $my_sourcedir = $people::panderp::params::my_sourcedir,
   $my_username  = $people::panderp::params::my_username

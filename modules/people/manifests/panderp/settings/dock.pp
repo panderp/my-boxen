@@ -1,7 +1,7 @@
-class people::grahamgilbert::dock (
-	$my_homedir   = $people::grahamgilbert::params::my_homedir,
-  	$my_sourcedir = $people::grahamgilbert::params::my_sourcedir,
-  	$my_username  = $people::grahamgilbert::params::my_username
+class people::panderp::settings::dock (
+	$my_homedir   = $people::panderp::params::my_homedir,
+  	$my_sourcedir = $people::panderp::params::my_sourcedir,
+  	$my_username  = $people::panderp::params::my_username
 	){
 	
 	include dockutil

@@ -1,7 +1,7 @@
 class people::panderp::settings::misc (
-  $my_homedir	=> $people::panderp::params::my_homedir,
-  $my_sourcedir	=> $people::panderp::params::my_sourcedir,
-  $my_username	=> $people::panderp::params::my_username,
+  $my_homedir	= $people::panderp::params::my_homedir,
+  $my_sourcedir	= $people::panderp::params::my_sourcedir,
+  $my_username	= $people::panderp::params::my_username
   ) {
 
   property_list_key { 'Show Battery Percent':
@@ -15,7 +15,7 @@ class people::panderp::settings::misc (
 
   exec { 'Restart SystemUIServer':
     command	=> '/usr/bin/killall -HUP SystemUIServer',
-    refershonly	=> true,
+    refreshonly	=> true,
   }
 
   file { 'Battery Plist':

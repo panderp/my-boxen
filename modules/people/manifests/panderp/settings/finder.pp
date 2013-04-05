@@ -1,4 +1,4 @@
-class people::natewalck::settings::finder  (
+class people::panderp::settings::finder  (
   $my_homedir   = $people::panderp::params::my_homedir,
   $my_sourcedir = $people::panderp::params::my_sourcedir,
   $my_username  = $people::panderp::params::my_username
